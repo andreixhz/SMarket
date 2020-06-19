@@ -9,6 +9,14 @@ User.init({
         primaryKey: true,
         autoIncrement: true
     },
+    userlogin:{
+        type: DataTypes.STRING(50),
+        allowNull: true
+    },
+    password:{
+        type: DataTypes.STRING(50),
+        allowNull: true
+    },
     nome:{
         type: DataTypes.STRING(20),
         allowNull: false
@@ -50,8 +58,8 @@ User.init({
     updatedAt: Sequelize.DATE,
 
 }, {
-    conn,
-    modelName: "user"
+    sequelize: conn,
+    modelName: "users"
 })
 
 module.exports = User;
