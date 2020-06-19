@@ -58,8 +58,9 @@ User.init({
     updatedAt: Sequelize.DATE,
 
 }, {
+    freezeTableName: true,
     sequelize: conn,
-    modelName: "users"
+    modelName: "user"
 })
 
 module.exports = User;
