@@ -22,9 +22,9 @@ Project being done using node.js
 git clone https://github.com/andreixhz/SMarket.git
 ```
 ## 2) choose where you want to go
-foulder name: server, client
+folder name: server, client
 ``` 
-cd {foulder name}
+cd {folder name}
 ```
 ## 3) Download dependencies
 ```
