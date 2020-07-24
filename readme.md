@@ -10,6 +10,7 @@ Project being done using node.js
 + express
 + sequelize
 + sqlite3
++ electron
 
 ### Client
 + React
