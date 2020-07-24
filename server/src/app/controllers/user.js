@@ -56,8 +56,6 @@ router.put('/:id', async(req, res) => {
     await user.save();
     return res.status(200).json({code: 200, msg:"user_updated"});
 
-
-
 });
 
 
