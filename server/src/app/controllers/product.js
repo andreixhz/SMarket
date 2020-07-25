@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/Product'); 
 
-Product.sync({force:true});
+//Product.sync({force:true});
 
 // create Product
 router.post('/', async(req, res) =>

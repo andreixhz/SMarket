@@ -10,8 +10,9 @@ ItemProduct.init({
         primaryKey: true,
         autoIncrement: true
     },
+    id_product: DataTypes.INTEGER,
     dueDate:{
-        type: DataTypes.DATEONLY,
+        type: Sequelize.DATE,
         allowNull: true
     },
 
