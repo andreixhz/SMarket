@@ -1,6 +1,10 @@
 const conn = require('../../database/database');
 const { Model , Sequelize, DataTypes } = require('sequelize');
 
+const Category = require('./Category')
+const SubCategory = require('./SubCategory')
+const Brand = require('./Brand')
+
 class Product extends Model {}
 
 Product.init({
@@ -9,6 +13,9 @@ Product.init({
         primaryKey: true,
         autoIncrement: true
     },
+    cat_id: DataTypes.INTEGER,
+    subCat_id: DataTypes.INTEGER,
+    brandId: DataTypes.INTEGER,
     code_bar:{
         type: DataTypes.STRING(20),
         allowNull: true
@@ -19,10 +26,6 @@ Product.init({
     },
     description:{
         type: DataTypes.STRING(50),
-        allowNull: true
-    },
-    brandId:{
-        type: DataTypes.INTEGER,
         allowNull: true
     },
     image:{
@@ -41,5 +44,22 @@ Product.init({
     sequelize: conn,
     modelName: "product"
 })
+
+Category.hasMany(Product);
+Product.belongsTo(Category, {
+    foreignKey:"cat_id"
+});
+
+SubCategory.hasMany(Product);
+Product.belongsTo(SubCategory, {
+    foreignKey:"subCat_id"
+});
+
+Brand.hasMany(Product);
+Product.belongsTo(Brand, {
+    foreignKey:"brandId"
+});
+
+
 
 module.exports = Product;
