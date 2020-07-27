@@ -53,7 +53,9 @@ User.init({
         type: DataTypes.STRING(100),
         allowNull: false
     },
-
+    type:{
+        type: DataTypes.INTEGER
+    },
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
 
