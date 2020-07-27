@@ -6,7 +6,7 @@ router.get('/logo', async(req, res) => {
     return res.sendFile(path.dirname(require.main.filename || process.mainModule.filename) + '\\cdn\\Logo.png');
 })
 
-router.get('/cfg', async(req,res) => {
+router.get('/', async(req,res) => {
 
     const config = {
         name:"Inveted Emprise",

@@ -1,27 +1,36 @@
 import electron from 'electron';
 import path from 'path';
 import url from 'url';
+import fs from 'fs';
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
+
+const {ipcMain} = require('electron')
 
 // *Funcoes devem ser exportadas pra serem acessiveis ao front-end
 // Executa comando do SO e retorna resultado ao front-end
 // Outro processo é o IPCMaine IPCRenderer
 // https://electronjs.org/docs/api/ipc-main
 // https://electronjs.org/docs/api/ipc-renderer
-exports.execProcess = (process, callback) => {
-  const { exec } = require('child_process');
-  const callExec = exec(process)
 
-  callExec.stdout.on('data', function(data){
-    callback(data)
-  })
-  callExec.stderr.on('data', function(data){
-    callback("<b>ERROR:</b> \n" + data)
-  })
-}
+
+ipcMain.on('saveConfig', (event, args) =>  {
+
+  let data = JSON.stringify(args);
+  fs.writeFileSync('config.json', data);
+  event.reply('saveConfigCallback', true);
+
+});
+
+ipcMain.on('initApp', (e, args) => {
+  if (fs.existsSync('config.json')) {
+    e.reply('initAppCallback', true)
+  } else {
+    e.reply('initAppCallback', false)
+  }
+});
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({

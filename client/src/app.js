@@ -1,6 +1,9 @@
 import React from 'react';
+import Loading from './screens/Loading';
 import Login from './screens/Login/index';
 import Home from './screens/Home';
+
+const { ipcRenderer } = require('electron')
 
 import {
     BrowserRouter,
@@ -10,13 +13,15 @@ import {
 
 // import { Container } from './styles';
 
+
 const App = () => {
 
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" component={Login}/>
                 <Route path="/home" component={Home}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/" component={Loading}/>
             </Switch>
         </BrowserRouter>
     )
