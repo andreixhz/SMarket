@@ -6,7 +6,7 @@ function Login() {
 	return (
 		<div className="d-flex d-all-center">
 			<form className="login-form">
-				TESTE
+				<img src="http://localhost:3325/cfg/logo"/>
 			</form>
 		</div>
 	);
