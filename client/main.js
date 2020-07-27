@@ -31,7 +31,7 @@ const createWindow = () => {
     // Caracteristicas visuais da janela
     // autoHideMenuBar: true,
     // titleBarStyle: 'customButtonsOnHover',
-    frame: false, // Retira barra superior
+    frame: true, // Retira barra superior
     useContentSize: false, // Inibe mostragem de dimensao da janela
 
     webPreferences: {
