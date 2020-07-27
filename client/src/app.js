@@ -21,7 +21,7 @@ const App = () => {
             <Switch>
                 <Route path="/home" component={Home}/>
                 <Route path="/login" component={Login}/>
-                <Route path="/" component={Loading}/>
+                <Route path="/" component={Login}/>
             </Switch>
         </BrowserRouter>
     )

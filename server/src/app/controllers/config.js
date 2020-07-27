@@ -10,7 +10,7 @@ router.get('/', async(req,res) => {
 
     const config = {
         name:"Inveted Emprise",
-        color: "7AB949",
+        color: "#7AB949",
         lang: "en_US"
     }
 

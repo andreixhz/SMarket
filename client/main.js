@@ -32,6 +32,14 @@ ipcMain.on('initApp', (e, args) => {
   }
 });
 
+ipcMain.on('getConfig', (e, args) => {
+  fs.readFile('config.json', (err, data) => {
+    if (err) throw err;
+    const config = JSON.parse(data);
+    e.reply('getConfig',config);
+  });
+})
+
 const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 800,
