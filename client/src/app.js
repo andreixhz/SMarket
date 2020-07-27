@@ -1,28 +1,27 @@
 import React from 'react';
-
-import Login from './screens/Login';
+import Login from './screens/Login/index';
 import Home from './screens/Home';
 
-import {useState, useEffect} from 'react';
-
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
     Route,
   } from "react-router-dom";
 
 // import { Container } from './styles';
 
-function app() {
+const App = () => {
 
     return (
-        <Router>
+        <BrowserRouter>
             <Switch>
-                <Route path="/"><Login /></Route>
-                <Route path="/home"><Home /></Route>
+                <Route path="/" component={Login}/>
+                <Route path="/home" component={Home}/>
             </Switch>
-        </Router>
+        </BrowserRouter>
     )
+    
 }
 
-export default app;
+export default App
+
