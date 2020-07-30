@@ -29,7 +29,7 @@ function HomeMenuItem({to, icon, name, last}) {
 
     return (
         <ButtonBase onClick={() => {history.push(to)}} className={classes.btn} style={{marginRight: !last ? 16 : 0}}>
-            <Paper className={classes.item} >
+            <Paper elevation={2} className={classes.item} >
                 {icon}
                 {name}
             </Paper>
