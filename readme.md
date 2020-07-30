@@ -39,8 +39,9 @@ npm start
 The interface is being made using modern design concepts using [Material UI](https://material-ui.com/) components
 
 
-## Interface Preview
-[Login Screen - image](https://i.imgur.com/BiEgkM9.png)
+## Interface Client Preview
+[Login Screen - image](https://imgur.com/BiEgkM9)
+[Home Screen - image](https://imgur.com/a/FjWSU5o)
 
 ## Figma Project
 [Figma Invite](https://www.figma.com/file/dO8pAceE4EN63ApbM3iWXB/Smarket?node-id=1%3A2)
