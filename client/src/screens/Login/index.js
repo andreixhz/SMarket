@@ -9,9 +9,8 @@ import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
 	inputText: {
-		marginButtom: '25px',
+		marginBottom: '10px',
 		width: '300px',
-		height: '70px'
 	},
 
 	logo:{
@@ -86,8 +85,8 @@ function Login() {
 				<form onSubmit={handleSubmit}>
 					<Box alignItems="center" display="flex" flexDirection="column">
 						<img src="http://localhost:3325/cfg/logo" height="77" width="180" className={classes.logo}/>
-						<TextField required onChange={handleName} id="standard-basic" label="Usuario" variant="outlined" className={classes.inputText} />
-						<TextField required onChange={handlePassword} id="standard-basic" type="password" label="Senha" variant="outlined" className={classes.inputText} />
+						<TextField required onChange={handleName} margin="dense" id="standard-basic" label="Usuario" variant="outlined" className={classes.inputText} />
+						<TextField required onChange={handlePassword} margin="dense" id="standard-basic" type="password" label="Senha" variant="outlined" className={classes.inputText} />
 						<Button onClick={HandleLoginClick} type="submit" variant="contained" className={classes.btn} style={{backgroundColor:color}}>
 							Login
 						</Button>
