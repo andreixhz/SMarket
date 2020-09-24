@@ -18,7 +18,7 @@ Client.init({
         allowNull: false
     },
     sexo:{
-        type: DataTypes.INTEGER,
+        type: DataTypes.CHAR,
         allowNull: false
     },
     nascimento:{
