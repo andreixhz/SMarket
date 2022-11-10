@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-jest": "^25.5.1",
-    "electron": "7.2.4",
+    "electron": "18.3.7",
     "electron-builder": "^20.39.0",
     "electron-react-devtools": "^0.5.3",
     "gulp": "^4.0.2",
